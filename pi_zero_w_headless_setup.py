@@ -140,10 +140,10 @@ if not is_wpa_supplicant_file_present:
 else:
     print("wpa_supplicant.conf file already present")
 
-userconfig_file_path = os.path.join(selected_drive, "userconfig.txt")
+userconfig_file_path = os.path.join(selected_drive, "userconf.txt")
 is_userconfig_file_present = os.path.exists(userconfig_file_path)
 if not is_userconfig_file_present:
-    print("Creating userconfig.txt file with hash of ssh password (username:pi password:raspberry)")
+    print("Creating userconf.txt file with hash of ssh password (username:pi password:raspberry)")
     with open(userconfig_file_path, "w") as f:
         # the long hash is the hash of the password "raspberry"
         # as described in the comment by André Kuhlmann at this StackOverflow question: 
