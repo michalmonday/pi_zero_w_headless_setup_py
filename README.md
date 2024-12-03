@@ -15,7 +15,7 @@ Alternatively, you can edit the script and hardcode the values (search for "WIFI
 
 # What it does
 * creates an empty file called "ssh"  
-* appends `dtoverlay=dwc2` to the end of the file "config.txt" file  
+* appends `dtoverlay=dwc2` to the end of the "config.txt" file  
 * inserts `modules-load=dwc2,g_ether` after `rootwait` in the "cmdline.txt" file  
 * creates "userconf.txt" file with the following content (corresponding to username=pi, password=raspberry):  
 ```
