@@ -6,6 +6,9 @@ This way, the process of getting pi zero W ready from scratch is:
 * run `pi_zero_w_headless_setup.py`  
 * ssh into the board (`ssh pi@raspberrypi.local`), (user=pi, password=raspberry),   
 
+It was tested using the following image file:  
+`2024-10-22-raspios-bullseye-armhf-lite.img`
+
 # Pre-requisites
 Before running the script, the following environment variables must be set:
 * WIFI_SSID   
