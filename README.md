@@ -6,10 +6,9 @@ This way, the process of getting pi zero W ready from scratch is:
 * run `pi_zero_w_headless_setup.py`  
 * ssh into the board (`ssh pi@raspberrypi.local`), (user=pi, password=raspberry),   
 
-It was tested using the following image file:  
-`2024-10-22-raspios-bullseye-armhf-lite.img`
+It was tested with Pi Zero W, and Pi Zero 2 W.
 
-As of 04/12/2024, it can be downloaded from https://www.raspberrypi.com/software/operating-systems/
+For the Pi Zero W, I used the following image file from https://www.raspberrypi.com/software/operating-systems/
 ```
 Raspberry Pi OS (Legacy) Lite
     Release date: October 22nd 2024
@@ -18,6 +17,18 @@ Raspberry Pi OS (Legacy) Lite
     Debian version: 11 (bullseye)
     Size: 366MB
 ```
+
+For the Pi Zero 2 W, I used the following image file from the same website:
+```
+Raspberry Pi OS (Legacy) Lite (64-bit version)
+    Release date: October 22nd 2024
+    System: 64-bit
+    Kernel version: 6.1
+    Debian version: 11 (bullseye)
+    Size: 312MB
+```
+
+For some reason, using the latest systems (non-legacy) didn't work for me. The computer wouldn't connect after the ssh command.
 
 # Pre-requisites
 Before running the script, the following environment variables must be set:
