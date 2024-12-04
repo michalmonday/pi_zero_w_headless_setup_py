@@ -9,6 +9,16 @@ This way, the process of getting pi zero W ready from scratch is:
 It was tested using the following image file:  
 `2024-10-22-raspios-bullseye-armhf-lite.img`
 
+As of 04/12/2024, it can be downloaded from https://www.raspberrypi.com/software/operating-systems/
+```
+Raspberry Pi OS (Legacy) Lite
+    Release date: October 22nd 2024
+    System: 32-bit
+    Kernel version: 6.1
+    Debian version: 11 (bullseye)
+    Size: 366MB
+```
+
 # Pre-requisites
 Before running the script, the following environment variables must be set:
 * WIFI_SSID   

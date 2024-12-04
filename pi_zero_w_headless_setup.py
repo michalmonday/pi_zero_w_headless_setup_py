@@ -5,6 +5,11 @@ import sys
 import string
 import ctypes
 from ctypes import wintypes
+import argparse
+
+parser = argparse.ArgumentParser(description="Setup a Raspberry Pi Zero W for headless operation")
+parser.add_argument("--override-file-check", action="store_true", help="Override the check for existing files on the drive")
+args = parser.parse_args()
 
 PI_ZERO_DEVICE_NAME = "bootfs"
 
@@ -78,9 +83,12 @@ if not selected_drive:
     print("No drive selected. Exiting")
     sys.exit(1)
 
-if not verify_drive_by_content(selected_drive):
-    print("Selected drive does not contain the necessary files. Exiting")
-    sys.exit(1)
+if args.override_file_check:
+    print("Skipping file check")
+else:
+    if not verify_drive_by_content(selected_drive):
+        print("Selected drive does not contain the necessary files (use --override-file-check option to ignore this). Exiting")
+        sys.exit(1)
 
 # create empty ssh file in the bootfs directory
 ssh_file_path = os.path.join(selected_drive, "ssh")
